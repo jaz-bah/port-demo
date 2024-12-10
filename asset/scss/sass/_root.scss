@@ -1,0 +1,342 @@
+@use "sass:meta";
+
+// fonts
+@font-face {
+    font-family: "Jazbah bg";
+    src: url("./../font/WarMachineStencil.woff2") format("woff2"),
+        url("./../font/WarMachineStencil.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Jazbah logo";
+    src: url("./../font/MechasideRegular.woff2") format("woff2"),
+        url("./../font/MechasideRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Jazbah heading";
+    src: url("./../font/PaytoneOne-Regular.woff2") format("woff2"),
+        url("./../font/PaytoneOne-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("./../font/RobotoMono-Bold.woff2") format("woff2"),
+        url("./../font/RobotoMono-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("./../font/RobotoMono-ExtraLight.woff2") format("woff2"),
+        url("./../font/RobotoMono-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("./../font/RobotoMono-Light.woff2") format("woff2"),
+        url("./../font/RobotoMono-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("./../font/RobotoMono-Medium.woff2") format("woff2"),
+        url("./../font/RobotoMono-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("./../font/RobotoMono-Regular.woff2") format("woff2"),
+        url("./../font/RobotoMono-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("./../font/RobotoMono-SemiBold.woff2") format("woff2"),
+        url("./../font/RobotoMono-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto Mono";
+    src: url("./../font/RobotoMono-Thin.woff2") format("woff2"),
+        url("./../font/RobotoMono-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-Black.woff2") format("woff2"),
+        url("./../font/Inter24pt-Black.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-Bold.woff2") format("woff2"),
+        url("./../font/Inter24pt-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-ExtraBold.woff2") format("woff2"),
+        url("./../font/Inter24pt-ExtraBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-ExtraLight.woff2") format("woff2"),
+        url("./../font/Inter24pt-ExtraLight.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-Light.woff2") format("woff2"),
+        url("./../font/Inter24pt-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-Medium.woff2") format("woff2"),
+        url("./../font/Inter24pt-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-Regular.woff2") format("woff2"),
+        url("./../font/Inter24pt-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-SemiBold.woff2") format("woff2"),
+        url("./../font/Inter24pt-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter 24pt";
+    src: url("./../font/Inter24pt-Thin.woff2") format("woff2"),
+        url("./../font/Inter24pt-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+// variables
+:root {
+    // font
+    --f-background: "Jazbah bg";
+    --f-logo: "Jazbah logo";
+    --f-heading: "Jazbah heading";
+    --f-subheading: "Roboto Mono";
+    --f-peragraph: "Inter 24pt";
+
+    // color
+    --c-dark: #000000;
+    --c-dark-mid: #111111;
+    --c-dark-light: #242424;
+    --c-light-mid: #b3b3b3;
+    --c-light: #ffffff;
+}
+
+.theme_chinese_dark {
+    --c-dark: #000000;
+    --c-dark-mid: #111111;
+    --c-dark-light: #242424;
+    --c-light-mid: #b3b3b3;
+    --c-light: #ffffff;
+}
+
+.theme_outer_space {
+    --c-dark: #353941;
+    --c-dark-mid: #26282b;
+    --c-dark-light: #242424;
+    --c-light-mid: #b3b3b3;
+    --c-light: #ffffff;
+}
+
+.theme_summer_green {
+    --c-dark: #c1d0b5;
+    --c-dark-mid: #fcf8e8;
+    --c-dark-light: #94b49f;
+    --c-light-mid: #242424;
+    --c-light: #000000;
+}
+
+.theme_satin_linen {
+    --c-dark: #ece5c7;
+    --c-dark-mid: #fefbe7;
+    --c-dark-light: #ebd8c3;
+    --c-light-mid: #242424;
+    --c-light: #000000;
+}
+
+// sass variables
+$b-light: 0.5px solid var(--c-light-mid);
+$b: 1px solid var(--c-light-mid);
+
+$z1: 4;
+$z2: 3;
+$z3: 2;
+$z4: 1;
+
+$toolbox-width: 400px;
+
+$t3: all linear 350ms;
+
+// @mixin heading1 {
+
+// }
+
+@mixin heading {
+    color: var(--c-light);
+    font-family: var(--f-heading);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin subheading {
+    color: var(--c-light);
+    font-family: var(--f-subheading);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+@mixin peragraph {
+    color: var(--c-light);
+    font-family: var(--f-peragraph);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@mixin button1 {
+    --before-top: 0;
+    --before-left: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: transparent;
+    border: $b-light;
+    color: var(--c-light);
+    font-size: 18px;
+    font-family: var(--f-heading);
+    overflow: hidden;
+    position: relative;
+
+    &,
+    & * {
+        cursor: pointer;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: var(--before-left);
+        top: var(--before-top);
+        display: block;
+        width: 0%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: var(--c-dark);
+        transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+    &:hover {
+        &::before {
+            width: 300%;
+        }
+    }
+}
+
+@mixin noScrollBar {
+    &,
+    & * {
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.imgbox_full,
+.imgbox {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.imgbox_full {
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@function flexWidth($card, $gap) {
+    @return calc((100% / $card) - ((($card - 1) * $gap) / $card));
+}
+
+
+@function colorOpacity($color, $opacity) {
+    @return "'" +$color + $opacity+"'";
+}

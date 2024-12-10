@@ -1,0 +1,17 @@
+.anm_infinity_rotate {
+    animation: rotate 4s ease-in-out infinite;
+}
+
+/* keyframes */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(360deg);
+    }
+    50%,
+    100% {
+        transform: rotate(360deg);
+    }
+}
